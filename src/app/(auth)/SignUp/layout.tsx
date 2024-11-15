@@ -1,4 +1,5 @@
 
+import { Toaster } from "@/components/ui/toaster";
 import { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
 
@@ -16,6 +17,7 @@ export default function Layout({children}:Readonly<{ children: React.ReactNode}>
         <>
             <NextTopLoader color="black" showSpinner={false} />
             {children}
+            <Toaster />
         </>
     );
 }

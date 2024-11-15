@@ -1,5 +1,8 @@
 
 import { Metadata } from "next";
+import { Toaster } from "@/components/ui/toaster";
+import NextTopLoader from "nextjs-toploader";
+
 
 export const metadata: Metadata = {
     title:"SignIn | ProjecTree ",
@@ -12,11 +15,10 @@ export const metadata: Metadata = {
 
 export default function Layout({children}:Readonly<{ children: React.ReactNode}>) {
     return (
-
-        <main>
-            <div className="flex-col items-center justify-evenly">
+        <>
+            <NextTopLoader color="black" showSpinner={false} />
             {children}
-            </div>
-        </main>
+            <Toaster />
+        </>
     );
 }

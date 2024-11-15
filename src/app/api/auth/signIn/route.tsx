@@ -19,7 +19,12 @@ export async function POST(request: NextRequest){
 
     if(isUser && hashedPass === isUser.password){
         console.log("Login Successful")
-        prisma.session.create(res);
+        prisma.session.create({
+            data:{
+                userId : isUser.id,
+                user: isUser
+            }
+        });
         return NextResponse.json(
             {status: 200},
             {statusText: "Login Successful"}

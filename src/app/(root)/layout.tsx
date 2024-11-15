@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 export default function Layout({children}:Readonly<{ children: React.ReactNode}>) {
     return (
         <body>
-            <Navbar />
             {children}
         </body>
     );
